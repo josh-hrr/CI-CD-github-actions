@@ -11,4 +11,4 @@ jobs:
         - name: 'repo checkout'
           uses: actions/checkout@v4
         - name: 'step to run python script'
-        run: python hello-world.py
+          run: python hello-world.py
