@@ -1,0 +1,14 @@
+name: hello-world worflow
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  PythonJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'repo checkout'
+        uses: actions/checkout@v4
+      - name: 'step to run python script'
+      run: python hello-world.py
