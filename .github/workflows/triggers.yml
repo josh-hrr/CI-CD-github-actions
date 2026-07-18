@@ -1,10 +1,10 @@
 name: CI for triggers
-
+run-name: triggers review!
 on:
   push:
     branches: [ main ]
   pull_request:
-    types: [ opened, labeled ]
+    types: [ opened, closed, synchronize, reopened ]
     branches:
       - '**/releases'
     paths:
