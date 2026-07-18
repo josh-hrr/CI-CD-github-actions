@@ -1,0 +1,23 @@
+name: CI for triggers
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    types: [ opened, labeled ]
+    branches:
+      - '**/releases'
+    paths:
+      - '**.py'
+  issues:
+    types: [ opened, edited, closed ]
+  schedule:
+    - cron: 30 5,17 17 7 0 
+  workflow_dispatch: 
+
+jobs:
+  myTriggerExample:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python hello-world.py
