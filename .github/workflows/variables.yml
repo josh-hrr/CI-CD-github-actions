@@ -10,8 +10,14 @@ on:
         required: true
         default: Test
 
+env:
+  my_env_name: 'envTest'
+
 jobs:
   myJob:
     runs-on: ubuntu-latest
     steps: 
-      - run: echo 'this is a test $my_name'
+      - name: INPUT STEP
+        run: echo 'this is an input variable:${{inputs.my_name}}'
+      - name: ENV STEP
+        run: echo 'thiss is a workflow variable:$my_env_name'
