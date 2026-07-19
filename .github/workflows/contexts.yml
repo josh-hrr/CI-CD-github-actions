@@ -1,0 +1,11 @@
+name: Context example
+run-name: Context1
+
+on: push
+
+jobs:
+  myContext:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deployment of branch $GITHUB_REF"
