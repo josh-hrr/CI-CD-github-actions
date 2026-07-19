@@ -22,4 +22,4 @@ jobs:
       - name: ENV STEP
         run: echo 'this is a workflow variable:${{ env.my_env_name }}'
       - name: REPO STEP
-        run: echo 'this is a repo variable:$REPOVARIABLE
+        run: echo 'this is a repo variable:$REPOVARIABLE'
