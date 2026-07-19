@@ -1,0 +1,17 @@
+name: variables example
+run-name: variablesv1
+
+on:
+  workflow_dispatch:
+    inputs:
+      my_name:
+        description: 'my_name variable'
+        type: string
+        required: true
+        default: Test
+
+jobs:
+  myJob:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo 'this is a test $my_name'
