@@ -20,4 +20,4 @@ jobs:
       - name: INPUT STEP
         run: echo 'this is an input variable:${{inputs.my_name}}'
       - name: ENV STEP
-        run: echo 'thiss is a workflow variable:$my_env_name'
+        run: echo 'this is a workflow variable:${{ env.my_env_name }}'
